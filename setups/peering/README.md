@@ -1,4 +1,19 @@
 # Peering Setup
 
+This setup expects you to have built the `consul:local` image:
+
+You can do so by cloning [Consul](https://github.com/hashicorp/consul) and
+running the following commands:
+
+1. `make ui-docker`
+2. `make dev-docker`
+
+## Starting the setup
+
 1. `yarn setup:tls`
 2. `docker-compose up`
+
+The setup will start two agents with the UI enabled:
+
+- server-1 - https://localhost:8501/ui/
+- server-2 - https://localhost:8601/ui/
