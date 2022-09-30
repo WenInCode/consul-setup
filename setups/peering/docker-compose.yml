@@ -7,12 +7,11 @@ services:
     volumes:
       - ./config/server1.json:/consul/config/server1.json:ro
 
-      - ./certs/cluster-a/:/consul/config/certs/:ro
+      - ./certs/:/consul/config/certs/:ro
     networks:
       - consul
     environment:
       - CONSUL_HCP_ENABLED=true
-      - CONSUL_HCP_MANAGED_RUNTIME=true
     ports:
       - '8501:8501'
 
@@ -22,7 +21,7 @@ services:
     restart: always
     volumes:
       - ./config/server2.json:/consul/config/server2.json:ro
-      - ./certs/cluster-b/:/consul/config/certs/:ro
+      - ./certs/:/consul/config/certs/:ro
     networks:
       - consul
     ports:

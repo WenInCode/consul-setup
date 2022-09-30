@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "workspaces": [
+    "setups/*"
+  ],
+  "volta": {
+    "node": "16.17.1"
+  },
+  "dependencies": {
+    "zx": "^7.0.8"
+  }
+}

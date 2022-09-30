@@ -1,0 +1,9 @@
+{
+  "name": "peering",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "setup:tls": "yarn zx ./scripts/setup-tls.mjs",
+    "up": "yarn zx ./scripts/up.mjs"
+  }
+}
