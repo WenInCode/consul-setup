@@ -14,6 +14,6 @@ For the best experience, you probably want to have [volta](https://volta.sh/) in
 
 ## Seriously, what do I do?
 
-You can find the different setups in the `setup`-folder. You clone this
+You can find the different setups in the `setups`-folder. You clone this
 repository, switch to the folder of the setup you wish to start and follow the
 instructions in the respective README.

@@ -17,3 +17,10 @@ The setup will start two agents with the UI enabled:
 
 - server-1 - https://localhost:8501/ui/
 - server-2 - https://localhost:8601/ui/
+
+## Using a different version than `consul:local`
+
+You can customize what consul image will be used by providing the
+`CONSUL_IMAGE` environment variable.
+
+`CONSUL_IMAGE=consul:latest docker-compose up`
