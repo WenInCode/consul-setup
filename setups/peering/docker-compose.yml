@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   consul-server1:
-    image: consul:local
+    image: ${CONSUL_IMAGE:-consul:local}
     container_name: consul-server-1
     restart: always
     volumes:
@@ -10,13 +10,11 @@ services:
       - ./certs/:/consul/config/certs/:ro
     networks:
       - consul
-    environment:
-      - CONSUL_HCP_ENABLED=true
     ports:
       - '8501:8501'
 
   consul-server2:
-    image: consul:local
+    image: ${CONSUL_IMAGE:-consul:local}
     container_name: consul-server-2
     restart: always
     volumes:
