@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "setup:tls": "yarn zx ./scripts/setup-tls.mjs"
+    "setup:tls": "yarn zx ./scripts/setup-tls.mjs",
+    "setup:peerings": "yarn zx ./scripts/setup-peerings.mjs"
   }
 }
