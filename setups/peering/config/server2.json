@@ -32,11 +32,17 @@
       "verify_incoming": false
     }
   },
+  "http_config": {
+    "response_headers": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Expose-Headers": "*"
+    }
+  },
   "auto_encrypt": {
     "allow_tls": true
   },
   "ports": {
-    "http": -1,
+    "http": 8500,
     "https": 8501,
     "grpc": 8502
   },
