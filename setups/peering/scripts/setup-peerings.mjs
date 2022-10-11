@@ -59,7 +59,7 @@ async function setupPeerings() {
             Namespace: "default",
             Consumers: [
               {
-                PeerName: "to-dc2",
+                Peer: "to-dc2",
               },
             ],
           },
@@ -68,6 +68,25 @@ async function setupPeerings() {
 
       // receiver: use token from dc1 and establish peering connection
       await establishPeering({ host: SERVER_2, peerName: "from-dc1", token });
+
+      // setup a service that server 2 will export
+      await createService({ host: SERVER_2, name: "redis" });
+
+      await createConfigurationEntry({
+        host: SERVER_2,
+        kind: "exported-services",
+        config: {
+          Services: {
+            Name: "redis",
+            Namespace: "default",
+            Consumers: [
+              {
+                Peer: "from-dc1",
+              },
+            ],
+          },
+        },
+      });
     } catch (e) {
       echo(`There was an error calling the API: ${e}`);
       process.exit(1);
