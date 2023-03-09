@@ -10,8 +10,9 @@ running the following commands:
 
 ## Starting the setup
 
-1. `yarn setup:tls`
+1. `yarn setup:tls` you should only have to do this the first time
 2. `docker-compose up`
+3. `yarn setup:peerings`
 
 The setup will start two agents with the UI enabled:
 
