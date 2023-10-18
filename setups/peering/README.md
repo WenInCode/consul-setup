@@ -10,9 +10,11 @@ running the following commands:
 
 ## Starting the setup
 
-1. `yarn setup:tls` you should only have to do this the first time
+1. `yarn setup:tls` you should only have to do this the first time or if it has expired
 2. `docker-compose up`
 3. `yarn setup:peerings`
+4. `consul acl bootstrap`
+5. copy the `SecretID` used to log into the UI.
 
 The setup will start two agents with the UI enabled:
 
@@ -25,3 +27,7 @@ You can customize what consul image will be used by providing the
 `CONSUL_IMAGE` environment variable.
 
 `CONSUL_IMAGE=consul:latest docker-compose up`
+
+## Suggested tutorials
+
+If you are looking to get a service with topology view this is a [good place to start](https://developer.hashicorp.com/consul/tutorials/developer-mesh/service-mesh-with-envoy-proxy).

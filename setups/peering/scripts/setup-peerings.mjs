@@ -71,6 +71,7 @@ async function setupPeerings() {
 
       // setup a service that server 2 will export
       await createService({ host: SERVER_2, name: "redis" });
+      await createService({ host: SERVER_2, name: "billing" });
 
       await createConfigurationEntry({
         host: SERVER_2,

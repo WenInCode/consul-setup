@@ -2,3 +2,4 @@ node_modules/
 setups/*/certs/*
 .DS_Store
 !setups/*/certs/.gitkeep
+.tool-versions
